@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app/app.component';
 import { PrincipalPageComponent } from './principal-page/principal-page.component';
 import { AboutComponent } from './about/about.component';
-import { RegisterComponent } from './register/register.component';
 //services
 import {AuthService } from "./services/auth/auth.service";
 //firebase
@@ -21,7 +20,6 @@ import { environment } from 'src/environments/environment';
     AppComponent,
     PrincipalPageComponent,
     AboutComponent,
-    RegisterComponent
   ],
   imports: [
     BrowserModule,
