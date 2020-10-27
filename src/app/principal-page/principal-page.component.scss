@@ -1,0 +1,33 @@
+.toolbar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 18% 57% 25%;
+    align-items: center;
+    background-color: #ebcaa8;
+    color: white;
+}
+.toolbar img {
+    margin: 0 16px;
+    width: 120px;
+}
+.toolbar .spacer {
+    grid-column-start: 2;
+    display: flex;    
+    justify-content: space-around;
+}
+.toolbar a{
+    color: #000000;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+.toolbar .tittle{
+    display: flex;
+    justify-content: space-around;
+    grid-column-start: 3;
+}
+
+.search {
+    position: sticky;
+}
