@@ -6,12 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app/app.component';
 import { PrincipalPageComponent } from './principal-page/principal-page.component';
 import { AboutComponent } from './about/about.component';
+import { RegisterComponent } from './register/register.component';
+//services
+import {AuthService } from "./services/auth/auth.service";
 //firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
-import { RegisterComponent } from './register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { RegisterComponent } from './register/register.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
   ],
-  providers: [],
+  providers: [
+    AuthService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
