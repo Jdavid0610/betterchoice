@@ -4,8 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 //components
 import { AppComponent } from './app/app.component';
-import { PrincipalPageComponent } from './principal-page/principal-page.component';
-import { AboutComponent } from './about/about.component';
+import { PrincipalPageComponent } from './components/principal-page/principal-page.component';
+import { AboutComponent } from './components/about/about.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 //services
 import {AuthService } from "./services/auth/auth.service";
 //firebase
@@ -15,11 +19,16 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     PrincipalPageComponent,
     AboutComponent,
+    SignInComponent,
+    SignUpComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent,
   ],
   imports: [
     BrowserModule,
