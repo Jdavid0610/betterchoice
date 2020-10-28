@@ -11,14 +11,23 @@
       </div>
       <div class="tittle">
         <a (click)="authService.SignOut()">
-          <i class="logOut">Cerrar sesión</i>
+          <a class="botones">Cerrar sesión</a>
         </a>
       </div>
 
   </div>
   <div class="sticky">
     <div class="second_toolbar">
-      <a class="account" href="">Mi Cuenta</a>
+      <div class="account" *ngIf="authService.userData as user; else NoLog">
+        <img class="img-profile" src="{{(user.photoURL) ? user.photoURL : '/assets/user-dummy.png'}}">
+        <a style="margin-left: 7%;"class="botones">{{(user.displayName) ? user.displayName : 'Ingresa'}}</a>
+      </div>
+      <ng-template #NoLog>
+        <div class="account">
+          <img class="img-profile" src="/assets/user-dummy.png">
+          <a routerLink="/sign-in" style="margin-left: 7%;"class="botones">Ingresa</a>
+        </div>
+      </ng-template>
       <div class="box">
         <div class="container-1">
             <span class="icon"><i class="fa fa-search"></i></span>
@@ -31,7 +40,7 @@
   
 
  <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------->
-  <div class="mw-parser-output"><table style="" class="noprint plainlinks ambox ambox-notice">
+  <div class="mw-parser-output"><table class="noprint plainlinks ambox ambox-notice">
     
 
     <tbody><tr>
@@ -58,32 +67,7 @@
     <li><a href="/wiki/Wikipedia:Verificabilidad" title="Wikipedia:Verificabilidad">Wikipedia:Verifiability#Wikipedia y fuentes que espejo o utilizarlo</a></li>
     <li><a href="/wiki/Wikipedia:Fuentes_fiables" title="Wikipedia:Fuentes fiables">Wikipedia:fuentes Fiables</a></li>
     <li><a href="/wiki/Wikipedia:Lo_que_Wikipedia_no_es" title="Wikipedia:Lo que Wikipedia no es">Wikipedia:Wikipedia no es una editorial de pensamiento original</a></li></ul>
-    <!-- 
-    NewPP limit report
-    Parsed by mw2365
-    Cached time: 20201023195716
-    Cache expiry: 2592000
-    Dynamic content: false
-    Complications: []
-    CPU time usage: 0.016 seconds
-    Real time usage: 0.023 seconds
-    Preprocessor visited node count: 97/1000000
-    Post‐expand include size: 2868/2097152 bytes
-    Template argument size: 1025/2097152 bytes
-    Highest expansion depth: 8/40
-    Expensive parser function count: 1/500
-    Unstrip recursion depth: 0/20
-    Unstrip post‐expand size: 0/5000000 bytes
-    Number of Wikibase entities loaded: 0/400
-    -->
-    <!--
-    Transclusion expansion time report (%,ms,calls,template)
-    100.00%    9.833      1 -total
-    100.00%    9.833      1 Plantilla:Ensayo
-     74.30%    7.306      1 Plantilla:Aviso
-    -->
     
-    <!-- Saved in parser cache with key eswiki:pcache:idhash:9098693-0!canonical and timestamp 20201023195716 and revision id 127395906
-     -->
-    </div>  
+    </div> 
+     <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------->
 </div>
