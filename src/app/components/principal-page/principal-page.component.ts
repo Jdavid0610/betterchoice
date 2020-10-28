@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-
+import { AuthService } from "./../../services/auth/auth.service";
 @Component({
   selector: 'app-principal-page',
   templateUrl: './principal-page.component.html',
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class PrincipalPageComponent implements OnInit {
   datos:any;
   
-  constructor(public httpClient: HttpClient) { 
+  constructor(public httpClient: HttpClient, public authService:AuthService) { 
     this.datos={'username':'', 'email':''};
   }
 

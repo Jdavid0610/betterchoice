@@ -1,1 +1,41 @@
-<p>sign-in works!</p>
+<div class="">
+    <div class="">
+  
+      <div class="">
+        <h3>Sign In</h3>
+        <div class="">
+          <input type="text" class="" placeholder="Username" #userName required>
+        </div>
+  
+        <div class="">
+          <input type="password" class="" placeholder="Password" #userPassword required>
+        </div>
+  
+        <!-- Calling SignIn Api from AuthService -->
+        <div class="">
+          <input type="button" class="" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+        </div>
+  
+        <div class="">
+          <span class=""><span class="">Or</span></span>
+        </div>
+  
+        <!-- Calling GoogleAuth Api from AuthService -->
+        <div class="">
+          <button type="button" class="" (click)="authService.GoogleAuth()">
+            <i class=""></i>
+            Log in with Google
+          </button>
+        </div>
+  
+        <div class="">
+          <span routerLink="/forgot-password">Forgot Password?</span>
+        </div>
+      </div>
+  
+      <div class="">
+        <span>Don't have an account?<span class="" routerLink="/register-user"> Sign Up</span></span>
+      </div>
+  
+    </div>
+  </div>

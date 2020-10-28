@@ -1,1 +1,45 @@
-<p>sign-up works!</p>
+<div class="">
+    <div class="">
+  
+      <div class="">
+        <h3>Registrate</h3>
+  
+        <div class="">
+          <input type="email" class="" placeholder="Correo" #userEmail required>
+        </div>
+  
+        <div class="formGroup">
+          <input type="password" class="" placeholder="Contraseña" #userPwd required>
+        </div>
+  
+        <div class="formGroup">
+          <input type="button" class="" value="Registrarme" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+        </div>
+  
+        <div class="formGroup">
+          <span class=""><span class="">Or</span></span>
+        </div>
+  
+        <!-- Continue with Google -->
+        <div class="">
+          <button type="button" class="" (click)="authService.GoogleAuth()">
+            <i class=""></i>
+            Continue with Google
+          </button>
+        </div>
+  
+        <!-- Continue with Facebook -->
+        <div class="">
+          <button type="button" class="" (click)="authService.FacebookAuth()">
+            <i class=""></i>
+            Continue with Facebook
+          </button>
+        </div>
+      </div>
+  
+      <div class="">
+        <span>Already have an account? <span class="" routerLink="/sign-in">Log In</span></span>
+      </div>
+    </div>
+  
+  </div>
