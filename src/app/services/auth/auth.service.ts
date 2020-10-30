@@ -27,16 +27,16 @@ export class AuthService {
   SignIn(email,password){
     return this.afAuth.signInWithEmailAndPassword(email,password).then((result)=>{
       this.ngZone.run(()=>{
-        this.router.navigate(['']);
+        this.router.navigate(['Ppage']);
       });
+      this.SetUserData(result.user);
     }).catch((error)=>{
       window.alert(error.message)
     });
   }
   
   SignUp(email, password) {
-    return this.afAuth.createUserWithEmailAndPassword(email, password)
-      .then((result) => {
+    return this.afAuth.createUserWithEmailAndPassword(email, password).then((result) => {
         /* Call the SendVerificaitonMail() function when new user sign 
         up and returns promise */
         this.SendVerificationMail();

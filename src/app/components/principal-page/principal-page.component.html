@@ -4,30 +4,32 @@
     <img alt="computador logo" src="assets/Logo.png"/>
       <div class="spacer">
         <a href="">Ensambla Tu Pc</a>
-        <a href="">¿Quienes Somos?</a>
+        <a routerLink="/About">¿Quienes Somos?</a>
         <a href="">Soporte</a>
         <a href="">HardWare General</a>
         <a href="">HardWare Pc</a>
       </div>
       <div class="tittle">
-        <a (click)="authService.SignOut()">
-          <a class="botones">Cerrar sesión</a>
-        </a>
+        <div  *ngIf="authService.userData as user; else NoLog">
+          <div class="account">
+            <a routerLink="/profile" class="botones"><img class="img-profile" src="{{(user.photoURL) ? user.photoURL : '/assets/user-dummy.png'}}"></a>
+            <a (click)="authService.SignOut()">
+              <a class="botones">Cerrar sesión</a>
+            </a>
+          </div>
+        </div>
+        <ng-template #NoLog>
+          <div class="account">
+            <a routerLink="/sign-in"><img class="img-profile" src="/assets/user-dummy.png"></a>
+            <a routerLink="/sign-in" class="botones">Ingresa</a>
+          </div>
+        </ng-template>
       </div>
 
   </div>
   <div class="sticky">
     <div class="second_toolbar">
-      <div class="account" *ngIf="authService.userData as user; else NoLog">
-        <img class="img-profile" src="{{(user.photoURL) ? user.photoURL : '/assets/user-dummy.png'}}">
-        <a style="margin-left: 7%;"class="botones">{{(user.displayName) ? user.displayName : 'Ingresa'}}</a>
-      </div>
-      <ng-template #NoLog>
-        <div class="account">
-          <img class="img-profile" src="/assets/user-dummy.png">
-          <a routerLink="/sign-in" style="margin-left: 7%;"class="botones">Ingresa</a>
-        </div>
-      </ng-template>
+     
       <div class="box">
         <div class="container-1">
             <span class="icon"><i class="fa fa-search"></i></span>
