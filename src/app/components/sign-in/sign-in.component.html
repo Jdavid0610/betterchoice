@@ -1,19 +1,22 @@
-<h1>Iniciar Sesión</h1>
-<div class="all">
-    <input type="text" class="input1" placeholder="Correo Electrónico" #userName required>
-    <input type="password" class="input1" placeholder="Contraseña" #userPassword required>
+<div>
+  <app-principal-nav></app-principal-nav>
+  <h1>Iniciar Sesión</h1>
+  <div class="all">
+      <input type="text" class="input1" placeholder="Correo Electrónico" #userName required>
+      <input type="password" class="input1" placeholder="Contraseña" #userPassword required>
 
-  <!-- Calling SignIn Api from AuthService -->
-  <div>
-    <input type="button" class="botones" value="Iniciar Sesión" (click)="authService.SignIn(userName.value, userPassword.value)">
-    <span class="or"><span class="">ó</span></span>
-    <button type="button" class="botones" (click)="authService.GoogleAuth()">
-      <i class=""></i>
-        Iniciar Con Google
-    </button>    
+    <!-- Calling SignIn Api from AuthService -->
+    <div>
+      <input type="button" class="botones" value="Iniciar Sesión" (click)="authService.SignIn(userName.value, userPassword.value)">
+      <span class="or"><span class="">ó</span></span>
+      <button type="button" class="botones" (click)="authService.GoogleAuth()">
+        <i class=""></i>
+          Iniciar Con Google
+      </button>    
+    </div>
+
+    <!-- Calling GoogleAuth Api from AuthService -->
+      <span routerLink="/forgot-password" class="botones">¿Olvidó Sú Contraseña?</span>
+      <span>Aún no Tienes Una Cuenta?<span class="botones" routerLink="/register-user"> Regístrate</span></span>
   </div>
-
-  <!-- Calling GoogleAuth Api from AuthService -->
-    <span routerLink="/forgot-password" class="botones">¿Olvidó Sú Contraseña?</span>
-    <span>Aún no Tienes Una Cuenta?<span class="botones" routerLink="/register-user"> Regístrate</span></span>
 </div>

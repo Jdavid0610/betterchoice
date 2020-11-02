@@ -1,0 +1,38 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="toolbar" role="banner">
+  <a routerLink="/Ppage" style="margin-right: 185px;"><img alt="computador logo" src="assets/Logo.png"/></a>
+  <div class="spacer">
+    <a routerLink="/builds">Ensambla Tu Pc</a>
+    <a routerLink="/About">¿Quienes Somos?</a>
+    <a routerLink="/support">Soporte</a>
+    <a routerLink="/hwgeneral">HardWare General</a>
+    <a routerLink="/hwpc">HardWare Pc</a>
+  </div>
+  <div class="tittle">
+    <div  *ngIf="authService.userData as user; else NoLog">
+      <div class="account">
+        <a routerLink="/profile" class="botones"><img class="img-profile" src="{{(user.photoURL) ? user.photoURL : '/assets/user-dummy.png'}}"></a>
+        <a (click)="authService.SignOut()">
+          <a class="botones">Cerrar sesión</a>
+        </a>
+      </div>
+    </div>
+    <ng-template #NoLog>
+      <div class="account">
+        <a routerLink="/sign-in"><img class="img-profile" src="/assets/user-dummy.png"></a>
+        <a routerLink="/sign-in" class="botones">Ingresa</a>
+      </div>
+    </ng-template>
+  </div>
+</div>
+<div class="sticky">
+<div class="second_toolbar">
+  <div class="box">
+    <div class="container-1">
+        <span class="icon"><i class="fa fa-search"></i></span>
+        <input type="search" id="search" placeholder="Search..." />
+    </div>
+  </div>
+  <a class="shopping"><a class="botones">Lista</a></a>
+</div>
+  

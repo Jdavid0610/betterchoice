@@ -22,6 +22,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
+import { PrincipalNavComponent } from './components/principal-nav/principal-nav.component';
 
 
 
@@ -40,6 +41,7 @@ import { environment } from 'src/environments/environment';
     HardwareGeneralComponent,
     HardwarePCComponent,
     ProfileComponent,
+    PrincipalNavComponent,
   ],
   imports: [
     BrowserModule,

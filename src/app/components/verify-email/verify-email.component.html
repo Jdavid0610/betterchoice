@@ -1,27 +1,28 @@
 <div class="">
+  <app-principal-nav></app-principal-nav>
+  <div class="">
+
     <div class="">
-  
-      <div class="">
-        <h3>Gracias por registrarte</h3>
-  
-        <div class="" *ngIf="authService.userData as user">
-          <p class="">Te hemos enviado la confirmacion de correo a <strong>{{user.email}}.</strong>.</p>
-          <p class="">Porfavor revisa tu correo y has click en el link para verificar tu correo.</p>
-        </div>
-        
-        <!-- Calling SendVerificationMail() method using authService Api -->
-        <div class="">
-          <button type="button" class="" (click)="authService.SendVerificationMail()">
-            <i class=""></i>
-            Reenviar la verificacion al correo
-          </button>
-        </div>
-  
+      <h3>Gracias por registrarte</h3>
+
+      <div class="" *ngIf="authService.userData as user">
+        <p class="">Te hemos enviado la confirmacion de correo a <strong>{{user.email}}.</strong>.</p>
+        <p class="">Porfavor revisa tu correo y has click en el link para verificar tu correo.</p>
       </div>
-  
+      
+      <!-- Calling SendVerificationMail() method using authService Api -->
       <div class="">
-        <span>Go back to?<span class="" routerLink="/sign-in"> Sign in</span></span>
+        <button type="button" class="" (click)="authService.SendVerificationMail()">
+          <i class=""></i>
+          Reenviar la verificacion al correo
+        </button>
       </div>
-  
+
     </div>
+
+    <div class="">
+      <span>Go back to?<span class="" routerLink="/sign-in"> Sign in</span></span>
+    </div>
+
   </div>
+</div>
