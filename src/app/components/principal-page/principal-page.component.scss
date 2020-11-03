@@ -20,13 +20,13 @@ ul{
     overflow: scroll;
     position: relative;
     overflow-y: hidden;
-    z-index: -2;
 }
   
 .Carrusel_Contenedor {
     white-space: nowrap;
     margin: 70px 0px;
     padding-bottom: 10px;
+    
 }
   
 .Carrusel_Item {
@@ -40,6 +40,7 @@ ul{
     transition: 450ms;
     transform-origin: center left;
     position: relative;
+    
 }
 
   
