@@ -84,7 +84,7 @@ export class AuthService {
     .then((result) => {
        this.ngZone.run(() => {
           this.router.navigate(['Ppage']);
-        })
+        });
       this.SetUserData(result.user);
     }).catch((error) => {
       window.alert(error)
@@ -112,8 +112,10 @@ export class AuthService {
   SignOut() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['sign-in']);
-    })
+      this.ngZone.run(() => {
+        this.router.navigate(['sign-in']);
+      });
+    });
   }
   
 }
