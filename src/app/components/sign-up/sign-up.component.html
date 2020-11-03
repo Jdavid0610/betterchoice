@@ -1,46 +1,27 @@
 <div class="">
   <app-principal-nav></app-principal-nav>
-  <div class="">
-
-    <div class="">
-      <h3>Registrate</h3>
-
-      <div class="">
-        <input type="email" class="" placeholder="Correo" #userEmail required>
-      </div>
-
-      <div class="formGroup">
-        <input type="password" class="" placeholder="Contraseña" #userPwd required>
-      </div>
-
-      <div class="formGroup">
-        <input type="button" class="" value="Registrarme" (click)="authService.SignUp(userEmail.value, userPwd.value)">
-      </div>
-
-      <div class="formGroup">
-        <span class=""><span class="">Or</span></span>
-      </div>
-
-      <!-- Continue with Google -->
-      <div class="">
-        <button type="button" class="" (click)="authService.GoogleAuth()">
+    <h1>Regístrate</h1>
+    <div class="all">
+      <input type="email" class="input1" placeholder="Correo Electrónico" #userEmail required>
+      <input type="password" class="input1" placeholder="Contraseña" #userPwd required>
+      
+      <div>
+        <input type="button" class="botones" value="Registrarme" (click)="authService.SignUp(userEmail.value, userPwd.value)">
+        <span class=""><span class="or">ó</span></span>
+        <!-- Continue with Google -->
+        <button type="button" class="botones" (click)="authService.GoogleAuth()">
           <i class=""></i>
-          Continue with Google
+            Iniciar Con Google
         </button>
       </div>
 
-      <!-- Continue with Facebook -->
-      <div class="">
-        <button type="button" class="" (click)="authService.FacebookAuth()">
+      <div>
+        <!-- Continue with Facebook -->
+        <button type="button" class="botones" (click)="authService.FacebookAuth()">
           <i class=""></i>
-          Continue with Facebook
+          Iniciar Con Facebook
         </button>
       </div>
+      <span>¿Ya Tienes Una Cuenta? <span class="botones" routerLink="/sign-in">Inicia Sesión</span></span>
     </div>
-
-    <div class="">
-      <span>Already have an account? <span class="" routerLink="/sign-in">Log In</span></span>
-    </div>
-  </div>
-
 </div>
