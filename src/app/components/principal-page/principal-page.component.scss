@@ -22,7 +22,7 @@ ul{
     overflow-y: hidden;
 }
   
-.Carrusel_Contenedor {
+.Carrusel_container {
     white-space: nowrap;
     margin: 70px 0px;
     padding-bottom: 10px;
@@ -48,15 +48,15 @@ ul{
     transform: translate3d(130px, 0, 0);
 }
   
-.Carrusel_Contenedor:hover .Carrusel_Item {
+.Carrusel_container:hover .Carrusel_Item {
     opacity: 0.7;
 }
   
-.Carrusel_Contenedor:hover .Carrusel_Item:hover {
+.Carrusel_container:hover .Carrusel_Item:hover {
     transform: scale(1.2);
     opacity: 1;
 }
-.categories-titulo{
+.categories-title{
     display: flex;
     justify-content: center;
 }

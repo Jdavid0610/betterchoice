@@ -14,16 +14,15 @@ export class AboutComponent implements OnInit {
     
   }
   
-  consulta() {
-    this.httpClient.get('http://127.0.0.1:8000/betterchoise/').subscribe((res) => {
+  consulta(path) {
+    this.httpClient.get('http://127.0.0.1:8000/betterchoise/'+path).subscribe((res) => {
       console.log(res);
       this.request = res;
     });
   }
 
   ngOnInit(): void {
-   this.request= {'mensaje':"about works!"};
-   
+   this.request={'mensaje':'respuesta de la conexion'}; 
   }
 
 }
