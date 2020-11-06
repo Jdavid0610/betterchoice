@@ -11,6 +11,13 @@ ul{
     padding-right: 30px;
 }
 
+.categorias{
+    transition: 500ms;
+}
+.categorias:hover{
+    transform: scale(1.2);   
+}
+
 .categories-img{
     width: 100%;
 }
@@ -43,15 +50,12 @@ ul{
     
 }
 
-  
 .Carrusel_Item:hover ~ .Carrusel_Item {
     transform: translate3d(130px, 0, 0);
 }
-  
 .Carrusel_container:hover .Carrusel_Item {
     opacity: 0.7;
 }
-  
 .Carrusel_container:hover .Carrusel_Item:hover {
     transform: scale(1.2);
     opacity: 1;
