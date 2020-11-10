@@ -42,7 +42,7 @@
     height: 60px;
     display: grid;
     align-items: center;
-    grid-template-columns: 3% 18% 51.1% 12% 15.9%;    
+    grid-template-columns: 3% 18% 51.1% 24.9% 3%;    
     background-color: #f6e4d3;
     border: 0px;
     border-bottom: 1px;
@@ -71,8 +71,10 @@
 .box{
     grid-column-start: 3;
 } 
-.shopping {
-    grid-column-start: 5;
+.container-2{
+    grid-column-start: 4;
+    display: flex;
+    justify-content: center;
 }
 
 
