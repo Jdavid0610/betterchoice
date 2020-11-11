@@ -14,6 +14,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 //httpclient
 import {HttpClientModule} from '@angular/common/http';
+//guard
+import { AuthGuard } from "./services/auth/auth.guard";
 
 const routes: Routes = [
   { path: '', redirectTo: '/Ppage', pathMatch: 'full' },
@@ -23,7 +25,7 @@ const routes: Routes = [
   { path: 'register-user', component: SignUpComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
-  { path: 'builds', component: BuildsComponent },
+  { path: 'builds', component: BuildsComponent, canActivate: [AuthGuard] },
   { path: 'hwgeneral', component: HardwareGeneralComponent },
   { path: 'hwpc', component: HardwarePCComponent },
   { path: 'support', component: SupportComponent },
