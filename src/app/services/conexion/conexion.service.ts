@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConexionService {
 
-  constructor() { }
+  constructor(router : Router,) {
+    
+   }
 }
