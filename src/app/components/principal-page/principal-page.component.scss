@@ -1,7 +1,19 @@
 .banner{
+    position: relative;
     display: flex;
     justify-content: center;
+    animation-name: animacion1;
+    animation-duration: 5s;
 }
+@keyframes animacion1{
+    0% {
+        opacity: 0%;left: -1800px;
+    }
+    100%{
+        opacity: 100%; left: 0px;
+    }
+}
+
 .banner-img{
     height: 400px;
 }
