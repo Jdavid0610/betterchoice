@@ -1,10 +1,9 @@
 .banner{
     position: relative;
+    z-index: -1;
     display: flex;
     justify-content: center;
-    animation-name: animacion1;
-    animation-duration: 2.5s;
-    animation-timing-function: linear;
+    animation: animacion1 2.5s linear;
 }
 @keyframes animacion1{
     0% {
@@ -15,9 +14,33 @@
     }
 }
 
-.banner-img{
-    height: 400px;
+.banner1{
+    width: 100%;
+    height: 360px;
+    animation: animacion2 10s infinite;
 }
+@keyframes animacion2{
+
+    0%, 30%{
+        background-image: url(../../../assets/Banner/Banner1.jpg);
+        opacity: 1;
+    }
+    31%, 35%{
+        opacity: 0.1;
+    }
+    36%, 65%{
+        background-image: url(../../../assets/Banner/Banner2.jpg);
+        opacity: 1;
+    }
+    66%, 69%{
+        opacity: 0.1;
+    }
+    70%, 100%{
+        background-image: url(../../../assets/Banner/Banner3.jpg);
+        opacity: 1;
+    }
+}
+
 ul{
     margin: 0px;
     padding-left: 30px;
