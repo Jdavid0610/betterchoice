@@ -1,9 +1,86 @@
 <div>
     <app-principal-nav></app-principal-nav>
-    <h1 style="align-content: center;">Esta es la pagina del hardware en general</h1>
-    <div style="display: flex; justify-content: center;">
-        <input type="text" placeholder="Entrada 1">
-        <input type="text" placeholder="Entrada 2">
-        <input type="number" name="" id="" placeholder="Entrada 3">
+    
+    <div class="all2">
+    <aside>
+		<h3 style="text-align: center;">Dispositivos</h3>
+		<article class="Filters">
+			<ul>
+                <li class="Filter">
+                    <input #CkLaptop id="CkLaptop" type="checkbox">
+                    <label for="CkLaptop">Portatiles</label>
+                </li>
+				<li class="Filter">
+                    <input #CkPhone id="CkPhone" type="checkbox">
+                    <label for="CkPhone">Celulares</label>
+                </li>
+				<li class="Filter">
+                    <input #CkKey id="CkKey" type="checkbox">
+                    <label for="CkKey">Teclados</label>
+                </li>
+				<li class="Filter">
+                    <input #CkMouse id="CkMouse" type="checkbox">
+                    <label for="CkMouse">Ratones</label>
+                </li>
+				<li class="Filter">
+                    <input #CkSonido id="CkSonido" type="checkbox">
+                    <label for="CkSonido">Sistemas De Sonido</label>
+                </li>
+			</ul>
+        </article>
+
+        <h3 style="text-align: center;">Tipo De Uso</h3>
+        <article class="Filters">
+            <ul>
+                <li class="Filter">
+                    <input #CkHogar id="CkHogar" type="checkbox">
+                    <label for="CkHogar">Hogar</label>
+                </li>
+                <li class="Filter">
+                    <input #CkPro id="CkPro" type="checkbox">
+                    <label for="CkPro">Profecional</label>
+                </li>
+                <li class="Filter">
+                    <input #CkGamer id="CkGamer" type="checkbox">
+                    <label for="CkGamer">Gamer</label>
+                </li>
+            </ul>
+        </article>
+        <h3 style="text-align: center;">Rango De Precio</h3>
+    </aside>
+        <div class="bodi">
+            <h1 style="text-align: center;">Hardware General</h1>
+            <div class="linea"></div>
+
+            <div class="Box">
+                <div class="Box-Img">
+                    <img src="/assets/Prueba Grafica.jpg" alt="">
+                </div>
+                <div class="Box-Text">
+                    <div class="Box-Izq">
+                        <span>Marca:</span>
+                        <span>Modelo:</span>
+                        <span>Precio:</span>
+                        <span>Sitio:</span>
+                    </div>
+                    <div class="Box-Der">
+                        <span #Marca>Sapphire</span>
+                        <span #Modelo>Rx 580</span>
+                        <span #Precio>$600.00</span>
+                        <span #Pagina>Amazon</span>
+                    </div>
+                </div>
+            </div>
+
+            <h1 style="align-content: center;">Esta es la pagina del hardware en general</h1>
+            <div style="display: flex; justify-content: center;">
+                <input type="text" placeholder="Entrada 1">
+                <input type="text" placeholder="Entrada 2">
+                <input type="number" name="" id="" placeholder="Entrada 3">
+            </div>
+        </div>
     </div>
+    
+    
+    
 </div>
