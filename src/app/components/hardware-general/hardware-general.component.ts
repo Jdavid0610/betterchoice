@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ConexionService } from '../../services/conexion/conexion.service'
 @Component({
   selector: 'app-hardware-general',
   templateUrl: './hardware-general.component.html',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HardwareGeneralComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(public conexionService:ConexionService) {
+
+   }
 
   ngOnInit(): void {
   }

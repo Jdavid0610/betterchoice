@@ -17,6 +17,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 //services
 import {AuthService } from "./services/auth/auth.service";
+import {ConexionService} from "./services/conexion/conexion.service";
 //firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from "@angular/fire/auth";
@@ -52,6 +53,8 @@ import { PrincipalNavComponent } from './components/principal-nav/principal-nav.
   ],
   providers: [
     AuthService,
+    ConexionService,
+
   ],
   bootstrap: [AppComponent]
 })
