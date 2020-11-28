@@ -1,4 +1,105 @@
 <div>
     <app-principal-nav></app-principal-nav>
-    <h1 style="align-content: center;">Esta es la pagina del harware de Pc's</h1>
+    <div class="all2">
+        <aside>
+            <h3 style="text-align: center;">Dispositivos</h3>
+            <article class="Filters">
+                <ul>
+                    <li class="Filter">
+                        <input #CkAlmacen id="CkAlmacen" type="checkbox">
+                        <label for="CkAlmacen">Almacenamiento</label>
+                    </li>
+                    <li class="Filter">
+                        <input #CkChasis id="CkChasis" type="checkbox">
+                        <label for="CkChasis">Chasis</label>
+                    </li>
+                    <li class="Filter">
+                        <input #CkPS id="CkPS" type="checkbox">
+                        <label for="CkPS">Fuente De Poder</label>
+                    </li>
+                    <li class="Filter">
+                        <input #CkRam id="CkRam" type="checkbox">
+                        <label for="CkRam">Modulos Ram</label>
+                    </li>
+                    <li class="Filter">
+                        <input #CkCPU id="CkCPU" type="checkbox">
+                        <label for="CkCPU">Procesadores</label>
+                    </li>
+                    <li class="Filter">
+                        <input #CkMB id="CkMB" type="checkbox">
+                        <label for="CkMB">Tarjeta Madre</label>
+                    </li>
+                    <li class="Filter">
+                        <input #CkGPU id="CkGPU" type="checkbox">
+                        <label for="CkGPU">Tarjeta Grafica</label>
+                    </li>
+                </ul>
+            </article>
+
+            <h3 style="text-align: center;">Tipo De Uso</h3>
+            <article class="Filters">
+                <ul>
+                    <li class="Filter">
+                        <input #CkHogar id="CkHogar" type="checkbox">
+                        <label for="CkHogar">Hogar</label>
+                    </li>
+                    <li class="Filter">
+                        <input #CkPro id="CkPro" type="checkbox">
+                        <label for="CkPro">Profecional</label>
+                    </li>
+                    <li class="Filter">
+                        <input #CkGamer id="CkGamer" type="checkbox">
+                        <label for="CkGamer">Gamer</label>
+                    </li>
+                </ul>
+            </article>
+            <h3 style="text-align: center;">Rango De Precio</h3>
+            <article class="Filters">
+                <ul>
+                    <li class="Filter">
+                        <label for="CkHogar">Precio Maximo:</label>
+                    </li>
+                    <li>
+                        <input #CkPriMax id="CkPriMax" type="" placeholder="Presupuesto">
+                    </li>
+                    <li class="Filter">
+                        <label for="CkPro">Precio Minimo:</label>
+                    </li>
+                    <li>
+                        <input #CkPriMin id="CkPriMin" type="" placeholder="Presupuesto">
+                    </li>
+                </ul>
+            </article>
+        </aside>
+        <div class="bodi">
+            <h1 style="text-align: center;">Hardware General</h1>
+            <div class="linea"></div>
+            <div class="linea">
+                <ng-container boxHost ></ng-container>
+                <div class="Box">
+                    <a class="botones">
+                        <div class="Box-Img">
+                            <img src="/assets/Prueba Grafica.jpg" alt="">
+                        </div>
+                        <div class="Box-Text">
+                            <div class="Box-Izq">
+                                <span>Marca:</span>
+                                <span>Modelo:</span>
+                                <span>Precio:</span>
+                                <span>Sitio:</span>
+                            </div>
+                            <div class="Box-Der">
+                                <span #Marca>Sapphire</span>
+                                <span #Modelo>Rx 580</span>
+                                <span #Precio>$600.00</span>
+                                <span #Pagina>Amazon</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
 </div>
