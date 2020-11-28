@@ -15,18 +15,19 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { BoxComponent } from './components/box/box.component';
 //services
 import {AuthService } from "./services/auth/auth.service";
 import {ConexionService} from "./services/conexion/conexion.service";
+import {AddBoxesService} from "./services/addBoxes/add-boxes.service"
 //firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { PrincipalNavComponent } from './components/principal-nav/principal-nav.component';
-
-
-
+import { DynamycHostDirective } from './directive/dynamyc-host.directive';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,10 @@ import { PrincipalNavComponent } from './components/principal-nav/principal-nav.
     HardwarePCComponent,
     ProfileComponent,
     PrincipalNavComponent,
+    BoxComponent,
+    DynamycHostDirective,
+    
+   
   ],
   imports: [
     BrowserModule,
@@ -51,10 +56,13 @@ import { PrincipalNavComponent } from './components/principal-nav/principal-nav.
     AngularFireAuthModule,
     AngularFirestoreModule,
   ],
+  entryComponents:[
+    BoxComponent
+  ],
   providers: [
     AuthService,
     ConexionService,
-
+    AddBoxesService,
   ],
   bootstrap: [AppComponent]
 })
