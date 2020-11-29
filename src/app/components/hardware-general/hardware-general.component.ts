@@ -21,14 +21,13 @@ export class HardwareGeneralComponent implements OnInit {
   }
 
 
-  sendSearch(Sbrand:String, sModel:String, sPrice_max:number){
+  sendSearch(Sbrand?:String, sModel?:String, sPrice_max?:number){
     const sItem = {
       brand: Sbrand,
       model: sModel,
       price_max: sPrice_max
     }
     this.conexionService.SendData(sItem).subscribe(item => {
-      this.link=item.URL;
       let cf =this.addBS.getbox(item);
       let vcr = this.boxHost.viewContainerRef;
       vcr.createComponent(cf,0)

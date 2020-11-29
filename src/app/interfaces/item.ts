@@ -1,6 +1,7 @@
 export interface Item {
     brand?: String;
     model?: String;
+    price?:number;
     price_max?: number;
     price_min?: number;
     use?: String;
