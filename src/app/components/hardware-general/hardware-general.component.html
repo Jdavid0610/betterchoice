@@ -98,7 +98,6 @@
     <div style="display: flex; justify-content: center;">   
         <input type="text" placeholder="brand" #brand>
         <input type="text" placeholder="model" #model>
-        <input type="number" placeholder="price"  #maxprice >
-        <input type="button" value="enviar" (click)="sendSearch(brand.value, model.value, maxprice.value)">
+        <input type="button" value="enviar" (click)="sendSearch(brand.value, model.value, CkPriMax.value,CkPriMin.value)">
     </div>
 </div>

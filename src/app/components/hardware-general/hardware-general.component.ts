@@ -21,7 +21,7 @@ export class HardwareGeneralComponent implements OnInit {
   }
 
 
-  sendSearch(Sbrand?:String, sModel?:String, sPrice_max?:number){
+  sendSearch(Sbrand?:String, sModel?:String, sPrice_max?:number,sPrice_min?:number,){
     const sItem = {
       brand: Sbrand,
       model: sModel,
