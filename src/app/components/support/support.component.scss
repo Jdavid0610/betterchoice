@@ -1,0 +1,39 @@
+h1{
+    margin-top: 30px;
+}
+.body2{
+    display: grid;
+    grid-template-columns: 5% 90% 5%
+}
+.text{
+    grid-column-start: 2;
+}
+.divsito{
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: 30% 5% 30% 5% 30%;
+}
+.box1{
+    grid-column-start: 1;
+}
+.box2{
+    grid-column-start: 3;
+}
+.box3{
+    grid-column-start: 5;
+}
+.box1, .box2, .box3{
+    background-color: #ffffff;
+    border: 2px #000000 solid;
+    border-radius: 10px;
+}
+.box1, .box2, .box3{
+    width: 550px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+}
+.img-box{
+    margin-top: 15px;
+    max-width: 530px;
+}
