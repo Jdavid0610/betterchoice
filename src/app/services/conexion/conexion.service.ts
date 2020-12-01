@@ -17,7 +17,7 @@ export class ConexionService {
     
   }
   
-  SendData(item:Item):Observable<Item>{
-    return this.httpClient.post<Item>(this.urlBack,item,{headers:this.httpHeaders})
+  SendData(item:Item){
+    return this.httpClient.post(this.urlBack,item,{headers:this.httpHeaders})
   }
 }

@@ -4,7 +4,7 @@ import { Directive, ViewContainerRef } from '@angular/core';
   selector: '[boxHost]'
 })
 export class DynamycHostDirective {
-
+  public hi="hoa";
   constructor(public viewContainerRef: ViewContainerRef) { }
 
 }

@@ -1,5 +1,8 @@
-import { Component, OnInit, Inject, Input } from '@angular/core';
+import { importType } from '@angular/compiler/src/output/output_ast';
+import { Component, OnInit, Inject, Input, Output, inject } from '@angular/core';
+import { from } from 'rxjs';
 import {Item} from '../../interfaces/item'
+import {AddBoxesService} from '../../services/addBoxes/add-boxes.service'
 @Component({
   selector: 'app-box',
   templateUrl: './box.component.html',
@@ -7,12 +10,13 @@ import {Item} from '../../interfaces/item'
 })
 export class BoxComponent implements OnInit {
   item:Item;
-  constructor() {
-
+  constructor(private addBoxes:AddBoxesService) {
+    
   }
 
+  
   ngOnInit(): void {
-    this.item= JSON.parse(sessionStorage.getItem('item'));
+    this.item=this.addBoxes.dataSolicitada();
   }
 
 }

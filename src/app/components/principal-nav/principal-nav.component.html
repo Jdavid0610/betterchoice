@@ -29,8 +29,8 @@
 <div class="second_toolbar">
   <div class="box">
     <div class="container-1">
-        <span class="icon"><i class="fa fa-search"></i></span>
-        <input type="search" id="search" placeholder="Search..." />
+        <a class="icon"(click)="search(model.value)"><i class="fa fa-search"></i></a>
+        <input #model  type="search" id="search" placeholder="Search..." />
     </div>
   </div>
   <div class="container-2">

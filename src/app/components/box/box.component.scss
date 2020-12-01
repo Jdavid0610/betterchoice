@@ -18,15 +18,16 @@
     max-height: 140px;
 }
 .Box-Text{
+    padding-left: 20px;
+    padding-right: 20px;
     height: 110px;
-    display: grid;
-    grid-template-columns: 10px 80px 20px 80px 10px;
 }
-.Box-Izq{
-    grid-column-start: 2;
-    display: grid;
+.Box-Text-container{
+    padding-top: 2px;
+    display: flex;
+    flex-direction: row;
 }
-.Box-Der{
-    grid-column-start: 4;
-    display: grid;
+.attr{
+    margin-left: 5px;
 }
+

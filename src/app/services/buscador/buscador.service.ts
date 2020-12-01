@@ -1,27 +1,19 @@
-import { Component, OnInit, ViewChild,OnDestroy, ComponentFactoryResolver} from '@angular/core';
-import {AddBoxesService} from '../../services/addBoxes/add-boxes.service'
-import { from } from 'rxjs';
-import { ConexionService } from '../../services/conexion/conexion.service'
-import { DynamycHostDirective } from '../../directive/dynamyc-host.directive'
-import { BoxComponent } from '../box/box.component';
-import { Item } from '../../interfaces/item'
-@Component({
-  selector: 'app-hardware-general',
-  templateUrl: './hardware-general.component.html',
-  styleUrls: ['./hardware-general.component.scss']
+import { ComponentFactoryResolver, Injectable, ViewChild } from '@angular/core';
+import { DynamycHostDirective } from 'src/app/directive/dynamyc-host.directive';
+import { AddBoxesService } from '../addBoxes/add-boxes.service';
+import { ConexionService } from '../conexion/conexion.service';
+import { BoxComponent } from '../../components/box/box.component';
+import { Item } from '../../interfaces/item';
+
+@Injectable({
+  providedIn: 'root'
 })
-export class HardwareGeneralComponent implements OnInit {
-  
+export class BuscadorService {
+
   @ViewChild(DynamycHostDirective, {static: true}) boxHost: DynamycHostDirective;
   constructor(public conexionService:ConexionService,private cfr: ComponentFactoryResolver, private limpiar:AddBoxesService) {
 
    }
-
-  ngOnInit(): void {
-
-  }
-
-
   sendSearch(Sbrand?:String, sModel?:String, sPrice_max?:number,sPrice_min?:number,){
     const sItem = {
       brand: Sbrand,
